@@ -24,4 +24,8 @@ connection.connect(function (err) {
 
 function start() {
     // User interface for customer
+    connection.query("SELECT * FROM bamazon", function (err, results) {
+        if (err) throw err;
+        console.log(results);
+    });
 }
